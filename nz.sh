@@ -5,14 +5,9 @@
 
 # Define constants
 work_dir="/etc/sing-box"
-NEZHA_SERVER=${NEZHA_SERVER:-''} # v1哪吒填写形式：nezha.abc.com:8008,v0哪吒填写形式：nezha.abc.com
-NEZHA_PORT=${NEZHA_PORT:-''}                      # v1哪吒留空此项,v0哪吒agent端口为{443,8443,2053,2083,2087,2096}其中之一时自动开启tls
-NEZHA_KEY=${NEZHA_KEY:-''}
-
-# 在脚本稍后的位置，在实际使用这些变量之前再导出
-export NEZHA_SERVER
-export NEZHA_PORT
-export NEZHA_KEY
+export NEZHA_SERVER=${NEZHA_SERVER:-''} # v1哪吒填写形式：nezha.abc.com:8008,v0哪吒填写形式：nezha.abc.com
+export NEZHA_PORT=${NEZHA_PORT:-''}                      # v1哪吒留空此项,v0哪吒agent端口为{443,8443,2053,2083,2087,2096}其中之一时自动开启tls
+export NEZHA_KEY=${NEZHA_KEY:-''}
 # Check and install required dependencies
 check_dependencies() {
     echo -e "\e[1;32mChecking dependencies...\e[0m"
